@@ -18,6 +18,7 @@ const Selection = () => {
               <img
                 class="w-[150px] h-[150px] left-[125px] top-[98px] absolute"
                 src={Beneficiary}
+                alt="beneficiary"
               />
               <div class="w-[190px] h-[39px] left-[10px] top-[39px] absolute text-neutral-950 text-[25px] font-bold leading-3">
                 기술 도움 주기
@@ -31,6 +32,7 @@ const Selection = () => {
               <img
                 class="w-[150px] h-[150px] left-[125px] top-[103px] absolute"
                 src={Requirement}
+                alt="requirement"
               />
               <div class="w-[190px] h-[39px] left-[35px] top-[41px] absolute text-neutral-950 text-[25px] font-bold leading-3">
                 기술 도움 요청하기
