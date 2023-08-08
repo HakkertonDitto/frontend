@@ -5,7 +5,6 @@ const Login = () => {
     <>
       <div className="flex justify-center">
         <div className="w-[360px] h-[800px] relative bg-white">
-          <div className="w-[465px] h-[303px] left-[-52px] top-[714px] absolute opacity-70 bg-teal-500 blur-[250px]" />
           <div className="w-[307px] left-[26px] top-[397px] absolute text-center text-neutral-500 text-sm font-normal leading-tight">
             회원가입 / 비밀번호찾기
           </div>
