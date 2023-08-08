@@ -6,8 +6,6 @@ const Selection = () => {
     <>
       <div className="flex justify-center">
         <div class="w-[360px] h-[800px] relative bg-white">
-          <div class="w-[465px] h-[303px] left-[-75px] top-[715px] absolute opacity-70 bg-green-600 blur-[250px]"></div>
-          <div class="w-[330px] h-[0px] left-[15px] top-[440px] absolute border border-black border-opacity-10"></div>
           <div class="w-[306px] h-[37px] left-[26px] top-[52px] absolute text-center text-neutral-950 text-[22px] font-bold leading-9">
             원하시는 서비스를 선택해주세요.
           </div>
@@ -25,6 +23,8 @@ const Selection = () => {
               </div>
             </div>
           </div>
+
+          <div class="w-[330px] h-[10px] left-[15px] top-[440px] absolute border-t-4 border-solid border-black border-opacity-10"></div>
 
           <div class="w-[300px] h-[287px] left-[30px] top-[475px] absolute justify-center items-center inline-flex">
             <div class="w-[300px] h-[287px] relative">
