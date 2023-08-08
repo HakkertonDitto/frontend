@@ -1,5 +1,6 @@
 import Beneficiary from "../assets/beneficiary.png";
 import Requirement from "../assets/requirement.png";
+import { Link } from "react-router-dom";
 
 const Selection = () => {
   return (
@@ -26,19 +27,21 @@ const Selection = () => {
 
           <div class="w-[330px] h-[10px] left-[15px] top-[440px] absolute border-t-4 border-solid border-black border-opacity-10"></div>
 
-          <div class="w-[300px] h-[287px] left-[30px] top-[475px] absolute justify-center items-center inline-flex">
-            <div class="w-[300px] h-[287px] relative">
-              <div class="w-[300px] h-[287px] left-0 top-0 absolute bg-white rounded-[50px] border-4 border-emerald-200"></div>
-              <img
-                class="w-[150px] h-[150px] left-[125px] top-[103px] absolute"
-                src={Beneficiary}
-                alt="beneficiary"
-              />
-              <div class="w-[190px] h-[39px] left-[35px] top-[41px] absolute text-neutral-950 text-[25px] font-bold leading-3">
-                기술 도움 드리기
+          <Link to="/donor/login">
+            <div class="w-[300px] h-[287px] left-[30px] top-[475px] absolute justify-center items-center inline-flex">
+              <div class="w-[300px] h-[287px] relative">
+                <div class="w-[300px] h-[287px] left-0 top-0 absolute bg-white rounded-[50px] border-4 border-emerald-200"></div>
+                <img
+                  class="w-[150px] h-[150px] left-[125px] top-[103px] absolute"
+                  src={Beneficiary}
+                  alt="beneficiary"
+                />
+                <div class="w-[190px] h-[39px] left-[35px] top-[41px] absolute text-neutral-950 text-[25px] font-bold leading-3">
+                  기술 도움 드리기
+                </div>
               </div>
             </div>
-          </div>
+          </Link>
         </div>
       </div>
     </>
