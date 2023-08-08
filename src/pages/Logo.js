@@ -23,6 +23,7 @@ const Logo = () => {
         <img
           className="w-[430px] h-[800px] left-0 top-0 absolute blur-sm"
           src={logo}
+          alt="logo"
         />
         <div className="w-[327px] left-[17px] top-[340px] absolute text-center text-teal-200 text-4xl font-black leading-9">
           디토
