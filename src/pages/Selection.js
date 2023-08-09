@@ -11,6 +11,7 @@ const Selection = () => {
             원하시는 서비스를 선택해주세요.
           </div>
 
+        <Link to="/asker/helpB">
           <div class="w-[300px] h-[287px] left-[30px] top-[118px] absolute justify-center items-center inline-flex">
             <div class="w-[300px] h-[287px] relative">
               <div class="w-[300px] h-[287px] left-0 top-0 absolute bg-white rounded-[50px] border-4 border-emerald-200"></div>
@@ -24,6 +25,7 @@ const Selection = () => {
               </div>
             </div>
           </div>
+          </Link>
 
           <div class="w-[330px] h-[10px] left-[15px] top-[440px] absolute border-t-4 border-solid border-black border-opacity-10"></div>
 
