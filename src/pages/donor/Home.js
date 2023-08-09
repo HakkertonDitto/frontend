@@ -3,7 +3,7 @@ const Home = () => {
     <>
       <div className="flex justify-center">
         <div className="w-[360px] h-[800px] relative bg-white">
-          <div className="w-[272px] left-[0px] top-[100px] absolute text-neutral-950 text-[28px] font-bold leading-9">
+          <div className="w-[200px] left-[20px] top-[100px] absolute text-neutral-950 text-[28px] font-bold leading-9">
             도움이 필요해요
           </div>
 
