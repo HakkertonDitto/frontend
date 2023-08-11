@@ -21,7 +21,9 @@ const Selection = () => {
                 src={Requirement}
                 alt="requirement"
               />
-              <div class="w-[190px] h-[39px] left-[35px] top-[39px] absolute text-neutral-950 text-[25px] font-bold leading-3">
+              <div class="w-[190px] h-[39px] left-[35px] top-[39px] absolute text-neutral-950 font-bold leading-3"
+                style={{lineHeight: "1.5em", fontSize: "1.5em", wordBreak: "keep-all"}}
+              >
                 기술 도움 요청하기
               </div>
             </div>
