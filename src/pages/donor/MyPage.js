@@ -31,7 +31,7 @@ const MyPage = () => {
               </div>
               <div className="w-[75px] text-right">
                 <span className="text-black text-base font-bold leading-9">
-                  4.5{" "}
+                  4.87{" "}
                 </span>
                 <span className="text-black text-base font-normal leading-9">
                   /
@@ -82,13 +82,27 @@ const MyPage = () => {
 
           {/* 1365 시간 옮기는 칸 */}
           <div className="w-80 h-[75px] pl-[13px] pr-3.5 pt-5 pb-[19px] left-[20px] top-[388px] absolute bg-white border-b border-black border-opacity-25 justify-center items-center inline-flex">
-            <div className="grow shrink basis-0 self-stretch justify-center items-start gap-[108px] inline-flex">
+            <div className="grow shrink basis-0 self-stretch justify-center items-start gap-[110px] inline-flex">
               <div className="w-[150px] text-black text-[17px] font-normal leading-9">
                 1365로 시간 옮기기
               </div>
               <Link to="https://www.1365.go.kr/vols/P9910/mber/volsLogin.do">
-                <div className="w-[35px]">
-                  <IoChevronForwardOutline size="35" />
+                <div className="w-[35px] top-[5px] relative">
+                  <IoChevronForwardOutline size="25" />
+                </div>
+              </Link>
+            </div>
+          </div>
+
+          {/* 내가 받은 평가 칸 */}
+          <div className="w-80 h-[75px] pl-[13px] pr-3.5 pt-5 pb-[19px] left-[20px] top-[463px] absolute bg-white border-b border-black border-opacity-25 justify-center items-center inline-flex">
+            <div className="grow shrink basis-0 self-stretch justify-start items-center gap-[110px] inline-flex">
+              <div className="w-[150px] text-black text-[17px] font-normal leading-9">
+                내가 받은 평가 보기
+              </div>
+              <Link to="/donor/mypage/comments">
+                <div className="w-[35px] relative">
+                  <IoChevronForwardOutline size="25" />
                 </div>
               </Link>
             </div>
