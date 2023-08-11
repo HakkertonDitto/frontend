@@ -2,6 +2,9 @@ import { Component } from "react";
 // import Modal from "../../components/modal/Modal";
 import Backdrop from "../../components/backdrop/Backdrop";
 import CustomedModalHome from "../../components/modal/CustomedModalHome";
+import { FaRegCircleUser } from "react-icons/fa6";
+import { IoFilterOutline } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 class Home extends Component {
   state = {
@@ -23,6 +26,14 @@ class Home extends Component {
           <div className="w-[360px] h-[800px] relative bg-white">
             <div className="w-[200px] left-[20px] top-[100px] absolute text-neutral-950 text-[28px] font-bold leading-9">
               도움이 필요해요
+            </div>
+            <Link to="/donor/mypage">
+              <div className="left-[300px] top-[40px] absolute">
+                <FaRegCircleUser size="30" />
+              </div>
+            </Link>
+            <div className="left-[300px] top-[102px] absolute">
+              <IoFilterOutline size="30" />
             </div>
 
             <div className="w-[322.02px] h-[0px] left-[19px] top-[151px] absolute border border-emerald-400"></div>
