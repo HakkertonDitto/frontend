@@ -14,7 +14,8 @@ const Selection = () => {
         <Link to="/asker/helpB">
           <div class="w-[300px] h-[287px] left-[30px] top-[118px] absolute justify-center items-center inline-flex">
             <div class="w-[300px] h-[287px] relative">
-              <div class="w-[300px] h-[287px] left-0 top-0 absolute bg-white rounded-[50px] border-4 border-emerald-200"></div>
+              <div class= "w-[300px] h-[287px] left-0 top-0 absolute bg-white rounded-[50px] border border-neutral-200"></div>
+              
               <img
                 class="w-[150px] h-[150px] left-[125px] top-[98px] absolute"
                 src={Requirement}
@@ -32,7 +33,7 @@ const Selection = () => {
           <Link to="/donor/login">
             <div class="w-[300px] h-[287px] left-[30px] top-[475px] absolute justify-center items-center inline-flex">
               <div class="w-[300px] h-[287px] relative">
-                <div class="w-[300px] h-[287px] left-0 top-0 absolute bg-white rounded-[50px] border-4 border-emerald-200"></div>
+                <div class= "w-[300px] h-[287px] left-0 top-0 absolute bg-white rounded-[50px] border border-neutral-200"></div>
                 <img
                   class="w-[150px] h-[150px] left-[125px] top-[103px] absolute"
                   src={Beneficiary}
