@@ -10,7 +10,7 @@ import Selection from "./pages/Selection";
 // 도움 주는 사람
 import Home from "./pages/donor/Home";
 import Login from "./pages/donor/Login";
-
+import MyPage from "./pages/donor/MyPage";
 // 도움 받는 사람
 import HelpB from "./pages/asker/HelpB";
 import HelpS from "./pages/asker/HelpS";
@@ -30,10 +30,10 @@ function App() {
         {/* 도움 주는 사람 */}
         <Route path="/donor/login" element={<Login />}></Route>
         <Route path="/donor/home" element={<Home />}></Route>
+        
 
         {/* 도움 받는사람 */}
-        <Route path="/asker/helpB" element={<HelpB/>}></Route>
-        <Route path="/asker/helpS" element={<HelpS/>}></Route>
+        
         <Route path="/asker/helpdetail" element={<HelpDetail/>}></Route>
       </Routes>
     </div>
