@@ -15,7 +15,7 @@ import MyPage from "./pages/donor/MyPage";
 import HelpB from "./pages/asker/HelpB";
 import HelpS from "./pages/asker/HelpS";
 import HelpDetail from "./pages/asker/HelpDetail";
-
+import Ready from "./pages/asker/Ready";
 function App() {
   return (
     <div className="App">
@@ -30,17 +30,11 @@ function App() {
         <Route path="/donor/home" element={<Home />}></Route>
         <Route path="/donor/mypage" element={<MyPage />}></Route>
 
-        
-
-     
-        
-
-        
-
          {/* 도움 받는사람 */}
         <Route path="/asker/helpB" element={<HelpB />}></Route>
         <Route path="/asker/helpS" element={<HelpS />}></Route>
           <Route path="/asker/helpdetail" element={<HelpDetail/>}></Route>
+          <Route path="/asker/ready" element={<Ready/>}></Route>
 
       </Routes>
     </div>
