@@ -1,4 +1,4 @@
-import "./Modal.css";
+import "./CustomedModalHome.css";
 
 const modal = (props) => {
   const cssClasses = ["Modal", props.show ? "ModalOpen" : "ModalClosed"];

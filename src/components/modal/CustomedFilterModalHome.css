@@ -4,7 +4,7 @@
   padding: 10px;
   text-align: center;
   box-sizing: border-box;
-  top: 25%;
+  top: 35%;
   transition: all 0.3s ease-out;
 }
 
@@ -18,16 +18,10 @@
 
 @keyframes openModal {
   0% {
-      opacity: 0;
-      transform: translateY(-100%);
-  }
-  50% {
-      opacity: 1;
-      transform: translateY(90%);
+      opacity: 0.2;
   }
   100% {
       opacity: 1;
-      transform: translateY(0);
   }
 }
 

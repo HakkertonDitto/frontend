@@ -2,6 +2,7 @@ import { Component } from "react";
 // import Modal from "../../components/modal/Modal";
 import Backdrop from "../../components/backdrop/Backdrop";
 import CustomedModalHome from "../../components/modal/CustomedModalHome";
+import CustomedFilterModalHome from "../../components/modal/CustomedFilterModalHome";
 import { FaRegCircleUser } from "react-icons/fa6";
 import { IoFilterOutline } from "react-icons/io5";
 import { Link } from "react-router-dom";
@@ -9,14 +10,19 @@ import { Link } from "react-router-dom";
 class Home extends Component {
   state = {
     modalIsOpen: false,
+    filterModalIsOpen: false,
   };
-
   showModal = () => {
     this.setState({ modalIsOpen: true });
   };
-
   closeModal = () => {
     this.setState({ modalIsOpen: false });
+  };
+  showFilterModal = () => {
+    this.setState({ filterModalIsOpen: true });
+  };
+  closeFilterModal = () => {
+    this.setState({ filterModalIsOpen: false });
   };
 
   render() {
@@ -32,19 +38,15 @@ class Home extends Component {
                 <FaRegCircleUser size="30" />
               </div>
             </Link>
-            <div className="left-[300px] top-[102px] absolute">
-              <IoFilterOutline size="30" />
-            </div>
+            <button onClick={this.showFilterModal}>
+              <div className="left-[300px] top-[102px] absolute">
+                <IoFilterOutline size="30" />
+              </div>
+            </button>
 
             <div className="w-[322.02px] h-[0px] left-[19px] top-[151px] absolute border border-emerald-400"></div>
-
             <div className="w-[66px] h-5 left-[25px] top-[167px] absolute text-stone-600 text-[17px] font-medium leading-tight">
               현재 필터
-            </div>
-
-            <div className="w-[25px] h-2.5 left-[168px] top-[775px] absolute">
-              <div className="w-2.5 h-2.5 left-0 top-0 absolute bg-emerald-400 rounded-full" />
-              <div className="w-2.5 h-2.5 left-[15px] top-0 absolute bg-zinc-300 rounded-full" />
             </div>
 
             <div className="w-[280px] h-[500px] left-[40px] top-[236px] absolute">
@@ -109,6 +111,15 @@ class Home extends Component {
           ) : null}
           {this.state.modalIsOpen ? (
             <Backdrop show={this.state.modalIsOpen} />
+          ) : null}
+          {this.state.filterModalIsOpen ? (
+            <CustomedFilterModalHome
+              show={this.state.filterModalIsOpen}
+              closed={this.closeFilterModal}
+            />
+          ) : null}
+          {this.state.filterModalIsOpen ? (
+            <Backdrop show={this.state.filterModalIsOpen} />
           ) : null}
         </div>
       </>
