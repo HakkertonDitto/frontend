@@ -18,6 +18,10 @@ const HelpDetail = () => {
     setModalActive(false);
   }
 
+  const sendRequsetToServer = () => {
+
+  }
+  
   return (
     <Background>
       <Header />
