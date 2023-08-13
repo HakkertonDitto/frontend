@@ -1,55 +1,33 @@
-import { useState } from "react";
-import Backarrow from "../../assets/backarrow.png";
-import { Link, useNavigate } from "react-router-dom";
+
+import Background from "../../components/Background";
+import Header from "../../components/Header";
+import ProgressBar from "../../components/ProgressBar";
+import { Title, Button } from "../../components";
+import styled from "styled-components";
+
 const HelpDetail = () => {
-  const navigate = useNavigate();
-
-  const [inputValue, setInputValue] = useState("");
-
-
-  const handleInputChange = (e) => {
-    setInputValue(e.target.value);
-  };
   return (
+    <Background>
+      <Header />
+      <ProgressBar progress={80} />
+      <Title>직접 작성해주세요</Title>
+      <TextArea placeholder="상세 설명을 입력해주세요" />
+      <Button>작성 완료</Button>
+    </Background>
+  );
+};
 
-    <div className="flex justify-center">
-      <div className="AskerHelpdetail w-[360px] h-[800px] relative bg-white">
-        {/* 그라데이션 */}
-        <div className="Background w-[465px] h-[303px] left-[-75px] top-[715px] absolute opacity-70 bg-teal-500 blur-[250px]" />
-        {/* 작성완료버튼 */}
-        <Link to="/asker/loading">
-        <div className="ControlsButtons w-[327px] h-12 py-4 left-[18px] top-[715px] absolute bg-emerald-400 rounded-[48px] justify-center items-center inline-flex">
-          <div className="Text text-center text-white text-base font-bold leading-none">작성 완료</div>
-        </div>
-        </Link>
-        {/* 글박스 */}
-        <div className="ControlsTextFields w-[297px] h-[207px] left-[31px] top-[210px] absolute rounded-lg">
-          <div className="Field w-[297px] h-[400px] left-0 top-0 absolute bg-white bg-opacity-20 rounded-lg border border-zinc-200" />
-          <textarea
-            className="Text w-[265px] left-[16px] top-[17px] h-[350px] absolute text-neutral-950 text-lg font-normal leading-[35px]"
-            placeholder="상세 설명을 입력해주세요."
-            value={inputValue}
-            onChange={handleInputChange}
-          />
-        
-        {/* 상위하얀박스 */}
-      </div>
-      <div className=" w-[360px] h-[148px] left-0 top-0 absolute bg-white">
-        <div className="BarsNavBarsStandard w-[360px] h-12 pl-[18px] pr-[318px] py-3 left-0 top-[8px] absolute bg-white justify-start items-center inline-flex">
-          <img className="ImageRemovebgPreview102 w-[41px] h-9 left-[20px] top-[10px] absolute origin-top-left " src={Backarrow} alt="backarrow" onClick={() => {
-            navigate(-1)
-          }} />
-          <div className="LeftActionable w-6 h-6 py-1.5 justify-center items-center inline-flex" />
-        </div>
-        {/* 직접 작성해주세요 */}
-        <div className=" w-[271px] left-[47px] top-[95px] absolute text-center text-neutral-950 text-[28px] font-bold leading-9">직접 작성해주세요</div>
-        <div className="ViewsProgressBars w-[314px] h-1 pr-[62.80px] left-[23px] top-[74px] absolute bg-zinc-200 rounded-[100px] justify-start items-center inline-flex">
-          <div className="Indicator w-[251.20px] h-1 bg-emerald-400 rounded-[100px]" />
-        </div>
-      </div>
-      </div>
-    </div>
+const TextArea = styled.textarea`
+  width: 100%;
+  height: 100%;
+  margin-bottom: 3rem;
+  padding: 1rem;
+  border-radius: 0.5rem;
+  border: 1px solid #e5e5e5;
+  outline: none;
+  resize: none;
+  font-size: 1.125rem;
+`;
 
-  )
-}
-export default HelpDetail
+export default HelpDetail;
+

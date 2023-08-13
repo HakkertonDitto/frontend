@@ -9,6 +9,7 @@ import Selection from "./pages/Selection";
 import Home from "./pages/donor/Home";
 import Login from "./pages/donor/Login";
 import MyPage from "./pages/donor/MyPage";
+import Comments from "./pages/donor/Comments";
 
 
 // 도움 받는 사람
@@ -30,6 +31,7 @@ function App() {
         <Route path="/donor/login" element={<Login />}></Route>
         <Route path="/donor/home" element={<Home />}></Route>
         <Route path="/donor/mypage" element={<MyPage />}></Route>
+        <Route path="/donor/mypage/comments" element={<Comments />}></Route>
 
          {/* 도움 받는사람 */}
         <Route path="/asker/helpB" element={<HelpB />}></Route>
