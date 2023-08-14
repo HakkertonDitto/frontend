@@ -39,7 +39,7 @@ const Card = ({
         <div
           className=" w-[286px] h-[39px] left-[14px] top-[23px] absolute text-neutral-950 text-[25px] font-bold leading-3"
           style={{
-            lineHeight: "2em",
+            lineHeight: "1.5em",
             fontSize: "1.5em",
             wordBreak: "keep-all",
           }}
@@ -59,7 +59,7 @@ const Card = ({
         <div
           className=" w-[266.57px] h-9 left-[14px] top-[15px] absolute text-neutral-950 text-[25px] font-bold leading-3"
           style={{
-            lineHeight: "2em",
+            lineHeight: "1.5em",
             fontSize: "1.5em",
             wordBreak: "keep-all",
           }}
@@ -76,7 +76,7 @@ const Card = ({
         <div
           className=" w-[266.57px] h-9 left-[15px] top-[17px] absolute text-neutral-950 text-[25px] font-bold leading-3"
           style={{
-            lineHeight: "2em",
+            lineHeight: "1.5em",
             fontSize: "1.5em",
             wordBreak: "keep-all",
           }}
@@ -94,7 +94,7 @@ const Card = ({
         <div
           className="Tv w-[286px] h-[39px] left-[15px] top-[18px] absolute text-neutral-950 text-[25px] font-bold leading-3"
           style={{
-            lineHeight: "2em",
+            lineHeight: "1.5em",
             fontSize: "1.5em",
             wordBreak: "keep-all",
           }}
