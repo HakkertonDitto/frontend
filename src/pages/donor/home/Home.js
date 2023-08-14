@@ -8,7 +8,7 @@ import CustomedModalHome from "../../../components/modal/CustomedModalHome";
 import NavbarHome from "./NavbarHome";
 import VolunteerButton from "./VolunteerButton";
 
-import { jsonData } from "./dummy.json";
+import dummyData from "./dummy.json";
 
 const Home = () => {
   // state = {
@@ -21,8 +21,13 @@ const Home = () => {
   // closeModal = () => {
   //   this.setState({ modalIsOpen: false });
   // };
-  const categories = ["컴퓨터/노트북", "태블릿", "TV", "키오스크"];
-  const [selectedCategory, setSelectedCategory] = useState(categories[0]); // 첫 번째 항목 선택
+  const categoryMap = {
+    computer: "컴퓨터/노트북",
+    tablet: "태블릿",
+    TV: "스마트TV",
+    kiosk: "키오스크",
+  };
+  const [selectedCategory, setSelectedCategory] = useState("computer"); // 첫 번째 항목 선택
   const [isVolunteer, setIsVolunteer] = useState(false);
 
   return (
@@ -71,34 +76,62 @@ const Home = () => {
 
                 {/* 카테고리 버튼 - 컴포넌트화 진행중 */}
                 {isVolunteer && (
-                  <div className="mt-2 flex justify-between">
-                    {categories.map((category, index) => (
-                      <div key={index} className="mr-2">
-                        <input
-                          id={`category-${index}`}
-                          className={`peer/${category.toLowerCase()} form-radio mr-2 mb-0.5 border-slate-300 text-sky-400 focus:ring-sky-300`}
-                          type="radio"
-                          name="status"
-                          checked={selectedCategory === category} // 선택된 카테고리와 일치할 때만 checked로 설정
-                          onChange={() => setSelectedCategory(category)} // 라디오 버튼 선택 시 상태 업데이트
-                        />
-                        <label
-                          htmlFor={`category-${index}`}
-                          className={`peer-checked/${category.toLowerCase()} ${
-                            selectedCategory === category
-                              ? "text-sky-500 font-medium"
-                              : "text-black"
-                          } `}
-                        >
-                          {category}
-                        </label>
-                      </div>
-                    ))}
+                  <div>
+                    <div className="mt-2 flex flex-wrap">
+                      {Object.keys(categoryMap).map((category, index) => (
+                        <div key={index} className="mr-2">
+                          <input
+                            id={`category-${index}`}
+                            className={`peer/${category.toLowerCase()} form-radio mr-2 mb-0.5 border-slate-300 text-sky-400 focus:ring-sky-300`}
+                            type="radio"
+                            name="status"
+                            checked={selectedCategory === category} // 선택된 카테고리와 일치할 때만 checked로 설정
+                            onChange={() => setSelectedCategory(category)} // 라디오 버튼 선택 시 상태 업데이트
+                          />
+                          <label
+                            htmlFor={`category-${index}`}
+                            className={`peer-checked/${category.toLowerCase()} ${
+                              selectedCategory === category
+                                ? "text-sky-500 font-medium"
+                                : "text-black"
+                            } `}
+                          >
+                            {categoryMap[category]}{" "}
+                            {/* categoryMap을 이용하여 한국어 카테고리로 표시 */}
+                          </label>
+                        </div>
+                      ))}
+                    </div>
+                    {/* 선택된 카테고리에 따른 데이터 렌더링 컴포넌트 */}
+                    <div>
+                      {selectedCategory && (
+                        <ul>
+                          {dummyData
+                            .filter(
+                              (item) => item.category === selectedCategory
+                            )
+                            .map((item, index) => (
+                              <li
+                                key={index}
+                                className="cursor-pointer bg-white p-4 rounded-md shadow-md hover:shadow-lg transition duration-300 transform mt-3"
+                              >
+                                <p className="text-sm text-gray-300 font-medium">
+                                  {categoryMap[item.category]}{" "}
+                                  {/* categoryMap을 이용하여 한국어 카테고리로 표시 */}
+                                </p>
+                                <p className="text-black text-lg">
+                                  {item.detail}
+                                </p>
+                              </li>
+                            ))}
+                        </ul>
+                      )}
+                    </div>
                   </div>
                 )}
 
-                <div class="hidden peer-checked/컴퓨터/노트북:block">
-                  {/* 도움 요청 들어오는 버튼 컴포넌트 (NeedHelp) */}
+                {/* 선택된 카테고리에 따른 데이터 렌더링 컴포넌트 (Deprecated */}
+                {/* <div class="hidden peer-checked/computer:block">
                   <div className="w-[280px] h-[75px] pl-[25px] pr-[72px] py-[15px]  bg-white border-b border-black border-opacity-25 justify-start items-center inline-flex">
                     <div className="w-[200px] self-stretch relative">
                       <button>
@@ -126,7 +159,7 @@ const Home = () => {
                 </div>
                 <div class="hidden peer-checked/태블릿:block">
                   Your post will be publicly visible on your site.
-                </div>
+                </div> */}
               </fieldset>
             </div>
           </div>
