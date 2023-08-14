@@ -1,9 +1,5 @@
 import { useState } from "react";
 
-// 모달 컴포넌트 만들어놓은건데,, 아마 안 쓸듯
-import Backdrop from "../../../components/backdrop/Backdrop";
-import CustomedModalHome from "../../../components/modal/CustomedModalHome";
-
 // 컴포넌트 import
 import NavbarHome from "./NavbarHome";
 import VolunteerButton from "./VolunteerButton";
