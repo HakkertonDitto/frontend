@@ -1,3 +1,4 @@
+
 import Background from "../../components/Background";
 import Header from "../../components/Header";
 import ProgressBar from "../../components/ProgressBar";
@@ -29,3 +30,4 @@ const TextArea = styled.textarea`
 `;
 
 export default HelpDetail;
+

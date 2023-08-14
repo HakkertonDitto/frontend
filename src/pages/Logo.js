@@ -7,15 +7,7 @@ import "../styles/Logo.css";
 const Logo = () => {
   const navigate = useNavigate();
 
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     navigate("./selection");
-  //   }, 2000);
-
-  //   return () => {
-  //     clearTimeout(timeout);
-  //   };
-  // }, [navigate]);
+ 
 
 // 디지털 장벽완화의 타이핑 효과
 const typingTxt = "지털   장 벽   완 화 의   ";
