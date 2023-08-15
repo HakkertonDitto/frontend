@@ -10,6 +10,7 @@ import Laptop from "../../assets/laptop.png";
 import Kiosk from "../../assets/kiosk.png";
 import TV from "../../assets/TV.png";
 
+
 const HelpB = () => {
     const [progress, setProgress] = useState(0);
     const cardContents = [
@@ -33,23 +34,23 @@ const HelpB = () => {
 
     useEffect(() => {
         setProgress(25);
-    }, [])
+    }, []);
 
+  
     return (
         <Background style={{ margin: "0 auto" }}>
             <Header />
             <ProgressBar progress={progress} />
             <Title>어떤 것을 도와드릴까요?</Title>
-                <Card contents={ cardContents } />
-                <Button>
-                    <Link to="/asker/HelpS" style={{display: "block", width: "100%", height: "100%"}}>선택하기</Link>
-                </Button>
+            <Card
+                contents={cardContents}
+               
+            />
+            <Button>
+                <Link to="/asker/HelpS" style={{ display: "block", width: "100%", height: "100%" }}>선택하기</Link>
+            </Button>
         </Background>
     );
 };
-
-
-
-
 
 export default HelpB;
