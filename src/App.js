@@ -6,17 +6,19 @@ import Logo from "./pages/Logo";
 import Selection from "./pages/Selection";
 
 // 도움 주는 사람
-import Home from "./pages/donor/Home";
+import Home from "./pages/donor/home/Home";
 import Login from "./pages/donor/Login";
 import MyPage from "./pages/donor/MyPage";
 import Comments from "./pages/donor/Comments";
-
 
 // 도움 받는 사람
 import HelpB from "./pages/asker/HelpB";
 import HelpS from "./pages/asker/HelpS";
 import HelpDetail from "./pages/asker/HelpDetail";
 import Ready from "./pages/asker/Ready";
+import Loading from "./pages/asker/Loading";
+
+import Test from "./pages/Test";
 function App() {
   return (
     <div className="App">
@@ -32,11 +34,13 @@ function App() {
         <Route path="/donor/mypage" element={<MyPage />}></Route>
         <Route path="/donor/mypage/comments" element={<Comments />}></Route>
 
-         {/* 도움 받는사람 */}
+        {/* 도움 받는사람 */}
         <Route path="/asker/helpB" element={<HelpB />}></Route>
         <Route path="/asker/helpS" element={<HelpS />}></Route>
-          <Route path="/asker/helpdetail" element={<HelpDetail/>}></Route>
-          <Route path="/asker/ready" element={<Ready/>}></Route>
+        <Route path="/asker/helpdetail" element={<HelpDetail />}></Route>
+        <Route path="/asker/ready" element={<Ready />}></Route>
+        <Route path="/asker/loading" element={<Loading />}></Route>
+        <Route path="/test" element={<Test />}></Route>
 
       </Routes>
     </div>
