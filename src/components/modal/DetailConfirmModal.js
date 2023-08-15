@@ -8,7 +8,7 @@ export default ({ active, onClickEdit, onClickDone }) => {
                 <Title style={{
                     marginBottom: "1rem",
                     fontSize: "1.5rem",
-                    fontWeight: "800"}} >입력 내용 확인</Title>
+                    fontWeight: "900"}} >입력 내용 확인</Title>
                 <Catagory>노트북 및 컴퓨터</Catagory>
                 <SubTitle>상세 내용</SubTitle>
                 <Detail style={{margin: "0 auto"}}></Detail>
