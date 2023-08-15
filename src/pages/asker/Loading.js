@@ -1,6 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import Call from "../../assets/call.png";
-import Header from "../../components/Background";
+import Header from "../../components/Header";
 import { useEffect } from "react";
 import Background from "../../components/Background";
 import "../../styles/Loading.css";
