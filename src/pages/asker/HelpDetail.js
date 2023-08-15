@@ -23,6 +23,12 @@ const HelpDetail = () => {
 
   }
 
+  const [ischanged,setIsChanged]=useState("");
+
+  const textSet = (event)=>{
+    setIsChanged(event.target.value)
+  }
+
   useEffect(() => {
     setProgress(75);
   }, [])
@@ -32,9 +38,9 @@ const HelpDetail = () => {
       <Header />
       <ProgressBar progress={progress} />
       <Title>직접 작성해주세요</Title>
-      <TextArea placeholder="상세 설명을 입력해주세요" />
+      <TextArea placeholder="상세 설명을 입력해주세요" onChange={textSet}/>
       <Button onClick={ openModal }>작성 완료</Button>
-      <DetailConfirmModal active={ modalActive } onClickEdit={ closeModal }/>
+      <DetailConfirmModal active={ modalActive } onClickEdit={ closeModal } ischanged={ischanged}/>
     </Background>
   );
 };

@@ -13,7 +13,15 @@
       border-color: transparent;
     }
   }
-  
+
+  .logo-text {
+    font-size: 36px;
+    font-weight: bold;
+    
+  text-align: center;
+ 
+ 
+  }
   .typing-text {
     display: inline-block;
     overflow: hidden;
@@ -23,6 +31,14 @@
   }
   
   .text-teal-200 {
-    color: #38b2ac;
+    color: #2CBB99;
   }
-  
+
+  .text-white {
+    -webkit-text-stroke: 0.001px #BBE0BA;
+   
+  }
+  .green-text{
+    color:#2CBB99;
+    font-weight: bold;
+  }
