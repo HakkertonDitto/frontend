@@ -8,16 +8,6 @@ import dummyData from "./dummy.json";
 import ModalHome from "./ModalHome";
 
 const Home = () => {
-  // state = {
-  //   modalIsOpen: false,
-  //   filterModalIsOpen: false,
-  // };
-  // showModal = () => {
-  //   this.setState({ modalIsOpen: true });
-  // };
-  // closeModal = () => {
-  //   this.setState({ modalIsOpen: false });
-  // };
   const categoryMap = {
     computer: "컴퓨터/노트북",
     tablet: "태블릿",
@@ -128,16 +118,6 @@ const Home = () => {
             </div>
           </div>
         </div>
-        {/* <button onclick={this.showModal}> */}
-        {/* {this.state.modalIsOpen ? (
-            <CustomedModalHome
-              show={this.state.modalIsOpen}
-              closed={this.closeModal}
-            />
-          ) : null}
-          {this.state.modalIsOpen ? (
-            <Backdrop show={this.state.modalIsOpen} />
-          ) : null} */}
       </div>
     </>
   );
