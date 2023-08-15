@@ -1,50 +1,62 @@
 [
   {
     "category": "computer",
-    "detail": "컴퓨터가 너무 어두워요."
+    "detail": "컴퓨터가 너무 어두워요.",
+    "roomNumber": 3
   },
   {
     "category": "computer",
-    "detail": "설정을 변경하고 싶어요."
+    "detail": "설정을 변경하고 싶어요.",
+    "roomNumber": 3
   },
   {
     "category": "kiosk",
-    "detail": "햄버거 주문이 어려워요."
+    "detail": "햄버거 주문이 어려워요.",
+    "roomNumber": 3
   },
   {
     "category": "tablet",
-    "detail": "태블릿 사용법을 모르겠어요."
+    "detail": "태블릿 사용법을 모르겠어요.",
+    "roomNumber": 3
   },
   {
     "category": "tablet",
-    "detail": "앱 다운로드 방법을 알려주세요."
+    "detail": "앱 다운로드 방법을 알려주세요.",
+    "roomNumber": 3
   },
   {
     "category": "TV",
-    "detail": "리모컨 설정이 어려워요."
+    "detail": "리모컨 설정이 어려워요.",
+    "roomNumber": 3
   },
   {
     "category": "TV",
-    "detail": "채널 변경하는 방법을 알려주세요."
+    "detail": "채널 변경하는 방법을 알려주세요.",
+    "roomNumber": 3
   },
   {
     "category": "kiosk",
-    "detail": "음료수 선택이 힘들어요."
+    "detail": "음료수 선택이 힘들어요.",
+    "roomNumber": 3
   },
   {
     "category": "computer",
-    "detail": "바이러스 검사하는 방법을 알려주세요."
+    "detail": "바이러스 검사하는 방법을 알려주세요.",
+    "roomNumber": 3
   },
   {
     "category": "tablet",
-    "detail": "화면 밝기 조절이 어려워요."
+    "detail": "화면 밝기 조절이 어려워요.",
+    "roomNumber": 3
   },
   {
     "category": "TV",
-    "detail": "사운드 설정이 이상해요."
+    "detail": "사운드 설정이 이상해요.",
+    "roomNumber": 3
   },
   {
     "category": "kiosk",
-    "detail": "주문 취소하는 방법을 알려주세요."
+    "detail": "주문 취소하는 방법을 알려주세요.",
+    "roomNumber": 3
   }
 ]
