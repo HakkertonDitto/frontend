@@ -1,5 +1,6 @@
 import Logoimage from "../assets/logoimage.png";
 import Logoicon from "../assets/logo.png";
+import Logo2 from "../assets/logo2.png";
 import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "../styles/Logo.css";
@@ -67,27 +68,27 @@ const Logo = () => {
   }, [count1, count]);
 
 //홈화면
- useEffect(() => {
-    const timer = setTimeout(() => {
-      navigate("/selection");
-    }, 5000); // 5초 후에 홈 화면으로 이동
+//  useEffect(() => {
+//     const timer = setTimeout(() => {
+//       navigate("/selection");
+//     }, 5000); // 5초 후에 홈 화면으로 이동
 
-    return () => {
-      clearTimeout(timer); // 컴포넌트가 언마운트되면 타이머 해제
-    };
-  }, [navigate]);
+//     return () => {
+//       clearTimeout(timer); // 컴포넌트가 언마운트되면 타이머 해제
+//     };
+//   }, [navigate]);
 
 
   return (
     <div className="flex justify-center">
       <div className="Question-wrapper relative bg-white w-full h-screen">
         <img
-          className="w-full h-50% object-cover absolute "
-          src={Logoimage}
+          className="w-full h-full object-cover absolute "
+          src={Logo2}
           alt="logoimage"
         />
         <div className="absolute inset-0 flex flex-col items-center justify-center">
-        <img className="logoimage w-40 h-40 top-[32%] left-[45.8%] absolute" src={Logoicon}  />
+        <img className="logoimage w-40 h-40 top-[30vh] absolute " src={Logoicon}  />
           {deleteItem ? (
             <div className="text-center flex items-center">
               <span className="text-emerald-400 text-2xl font-black leading-9">
@@ -104,8 +105,8 @@ const Logo = () => {
               </span>
             </div>
           ) : null}
-          <div className="logo-text">
-            {isAnimating ? null : <span className="green-text">디토</span>}
+          <div className="logo-text absolute inset-0 flex flex-col items-center justify-center">
+            {isAnimating ? null : <span className="green-text absolute ">디토</span>}
           </div>
         </div>
       </div>
