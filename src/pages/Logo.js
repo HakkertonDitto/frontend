@@ -4,6 +4,7 @@ import { useNavigate } from "react-router-dom";
 import "../styles/Logo.css";
 
 
+
 const Logo = () => {
   const navigate = useNavigate();
 
@@ -81,7 +82,9 @@ useEffect(() => {
         alt="logo"
       />
       <div className="absolute inset-0 flex flex-col items-center justify-center">
+      
         <div className="text-center">
+          
         
         </div>
         <div className="text-center flex items-center">
