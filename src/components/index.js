@@ -14,8 +14,9 @@ export const Button = styled.button`
     width: ${({ width }) => width || '90%'};
     color: #fff;
     border: none;
-    border-radius: 2.5rem;
-    padding: 0.75rem 1rem;
+    margin-bottom: 1rem;
+    padding: ${({paddingHeight=1.5}) => paddingHeight/2}rem 1rem;
+    border-radius: ${({paddingHeight=1.5}) => 1.1+paddingHeight}rem;
     font-size: 1.1rem;
     font-weight: 700;
     cursor: pointer;

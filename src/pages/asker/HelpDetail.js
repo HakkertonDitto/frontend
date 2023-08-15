@@ -2,17 +2,35 @@
 import Background from "../../components/Background";
 import Header from "../../components/Header";
 import ProgressBar from "../../components/ProgressBar";
+import DetailConfirmModal from "../../components/modal/DetailConfirmModal";
 import { Title, Button } from "../../components";
 import styled from "styled-components";
+import { useState } from "react";
 
 const HelpDetail = () => {
+  const [modalActive, setModalActive] = useState(false);
+  const openModal = (e) => {
+    e.preventDefault();
+    setModalActive(true);
+  }
+
+  const closeModal = (e) => {
+    e.preventDefault();
+    setModalActive(false);
+  }
+
+  const sendRequsetToServer = () => {
+
+  }
+  
   return (
     <Background>
       <Header />
-      <ProgressBar progress={80} />
+      <ProgressBar progress={ 80 } />
       <Title>직접 작성해주세요</Title>
       <TextArea placeholder="상세 설명을 입력해주세요" />
-      <Button>작성 완료</Button>
+      <Button onClick={ openModal }>작성 완료</Button>
+      <DetailConfirmModal active={ modalActive } onClickEdit={ closeModal }/>
     </Background>
   );
 };
@@ -30,4 +48,3 @@ const TextArea = styled.textarea`
 `;
 
 export default HelpDetail;
-
