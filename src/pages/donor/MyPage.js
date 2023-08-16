@@ -52,6 +52,20 @@ const MyPage = () => {
                   </div>
                 </div>
 
+                {/* 내가 받은 평가 칸 */}
+                <div className="w-80 h-[75px] pl-[13px] pr-3.5 pt-5 pb-[19px] bg-white border-b border-black border-opacity-25 justify-center items-center inline-flex">
+                  <div className="grow shrink basis-0 self-stretch justify-start items-center gap-[110px] inline-flex">
+                    <div className="w-[150px] text-black text-[17px] font-normal leading-9">
+                      내가 받은 평가 보기
+                    </div>
+                    <Link to="/donor/mypage/comments">
+                      <div className="w-[35px] relative">
+                        <IoChevronForwardOutline size="25" />
+                      </div>
+                    </Link>
+                  </div>
+                </div>
+
                 {/* 내가 봉사한 횟수 칸 */}
                 <div className="w-80 h-[75px] px-[13px] pt-5 pb-[19px] bg-white border-b border-black border-opacity-25 justify-center items-center inline-flex">
                   <div className="grow shrink basis-0 self-stretch justify-center items-start gap-[69px] inline-flex">
@@ -94,20 +108,6 @@ const MyPage = () => {
                     </div>
                     <Link to="https://www.1365.go.kr/vols/P9910/mber/volsLogin.do">
                       <div className="w-[35px] top-[5px] relative">
-                        <IoChevronForwardOutline size="25" />
-                      </div>
-                    </Link>
-                  </div>
-                </div>
-
-                {/* 내가 받은 평가 칸 */}
-                <div className="w-80 h-[75px] pl-[13px] pr-3.5 pt-5 pb-[19px] bg-white border-b border-black border-opacity-25 justify-center items-center inline-flex">
-                  <div className="grow shrink basis-0 self-stretch justify-start items-center gap-[110px] inline-flex">
-                    <div className="w-[150px] text-black text-[17px] font-normal leading-9">
-                      내가 받은 평가 보기
-                    </div>
-                    <Link to="/donor/mypage/comments">
-                      <div className="w-[35px] relative">
                         <IoChevronForwardOutline size="25" />
                       </div>
                     </Link>
