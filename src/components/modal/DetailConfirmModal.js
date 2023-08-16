@@ -37,13 +37,13 @@ const ModalBackground = styled.div`
     background-color: #00000088;
     position: absolute;
     justify-content: center;
-    align-itmes: center;
+    align-items: center;
 `
 
 const Modal = styled.div`
     display: flex;
     flex-direction: column;
-    align-item: center;
+    align-items: center;
     width: 70vw;
     height: 75vh;
     background-color: #FFFFFF;
