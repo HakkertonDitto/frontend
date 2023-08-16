@@ -9,12 +9,16 @@ import ModalHome from "./ModalHome";
 
 const Home = () => {
   const categoryMap = {
-    computer: "컴퓨터/노트북",
-    tablet: "태블릿",
-    TV: "스마트TV",
-    kiosk: "키오스크",
+    restaurant: "음식점",
+    airport: "공항",
+    train: "기차/지하철역",
+    bus: "버스정거장/터미널",
+    hospital: "병원",
+    bank: "은행",
+    library: "도서관",
+    etc: "기타 장소",
   };
-  const [selectedCategory, setSelectedCategory] = useState("computer"); // 첫 번째 항목 선택
+  const [selectedCategory, setSelectedCategory] = useState(""); // 아무것도 선택되지 않은 상태
   const [isVolunteer, setIsVolunteer] = useState(false);
   const [selectedModalItem, setSelectedModalItem] = useState(null); // 초기값은 null로 설정
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -49,30 +53,49 @@ const Home = () => {
                 {/* 카테고리 버튼 - 컴포넌트화 진행중 */}
                 {isVolunteer && (
                   <div>
-                    <div className="mt-2 flex flex-wrap">
-                      {Object.keys(categoryMap).map((category, index) => (
-                        <div key={index} className="mr-2">
-                          <input
-                            id={`category-${index}`}
-                            className={`peer/${category.toLowerCase()} form-radio mr-2 mb-0.5 border-slate-300 accent-green-700`}
-                            type="radio"
-                            name="status"
-                            checked={selectedCategory === category} // 선택된 카테고리와 일치할 때만 checked로 설정
-                            onChange={() => setSelectedCategory(category)} // 라디오 버튼 선택 시 상태 업데이트
-                          />
-                          <label
-                            htmlFor={`category-${index}`}
-                            className={`peer-checked/${category.toLowerCase()} ${
-                              selectedCategory === category
-                                ? "text-[#2CBB99] font-bold"
-                                : "text-black"
-                            } `}
-                          >
-                            {categoryMap[category]}{" "}
-                            {/* categoryMap을 이용하여 한국어 카테고리로 표시 */}
-                          </label>
-                        </div>
-                      ))}
+                    {/* 키오스크 (고정 버튼) */}
+                    <div className="border px-5 py-4 mt-2 rounded-lg">
+                      <div className="border-b pb-2">
+                        <input
+                          id={`category-kiosk`}
+                          className={`peer/ss form-radio mt-3 mr-2 mb-3 border-slate-300 accent-[#898C90]`}
+                          type="radio"
+                          name="kioskonly"
+                          checked={true} // 선택된 카테고리와 일치할 때만 checked로 설정
+                          readOnly // 읽기 전용으로 설정하여 변경 방지
+                        />
+                        <label
+                          htmlFor={`category-kiosk`}
+                          className={`peer-checked/kiosk text-gray-400`}
+                        >
+                          키오스크
+                        </label>
+                      </div>
+                      <div className="mt-4 flex flex-wrap">
+                        {Object.keys(categoryMap).map((category, index) => (
+                          <div key={index} className="mr-2">
+                            <input
+                              id={`category-${index}`}
+                              className={`peer/${category.toLowerCase()} form-radio mr-2 mb-0.5 border-slate-300 accent-green-700`}
+                              type="radio"
+                              name="status"
+                              checked={selectedCategory === category} // 선택된 카테고리와 일치할 때만 checked로 설정
+                              onChange={() => setSelectedCategory(category)} // 라디오 버튼 선택 시 상태 업데이트
+                            />
+                            <label
+                              htmlFor={`category-${index}`}
+                              className={`peer-checked/${category.toLowerCase()} ${
+                                selectedCategory === category
+                                  ? "text-[#2CBB99] font-bold"
+                                  : "text-black"
+                              } `}
+                            >
+                              {categoryMap[category]}{" "}
+                              {/* categoryMap을 이용하여 한국어 카테고리로 표시 */}
+                            </label>
+                          </div>
+                        ))}
+                      </div>
                     </div>
 
                     {/* 선택된 카테고리에 따른 데이터 렌더링 컴포넌트 */}
@@ -94,7 +117,9 @@ const Home = () => {
                                   {/* categoryMap을 이용하여 한국어 카테고리로 표시 */}
                                 </p>
                                 <p className="text-black text-lg">
-                                  {item.detail}
+                                  {item.detail.length > 30
+                                    ? `${item.detail.slice(0, 30)}...`
+                                    : item.detail}
                                 </p>
                               </li>
                             ))}
