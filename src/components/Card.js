@@ -35,20 +35,17 @@ const CardWrapper = styled.div`
 `
 
 const Card = styled.div`
-    border: 2px solid #E5E5E5;
-    border-radius: 10px;
-    padding: 0.75rem;
-    background-color: ${({ isSelected }) => (isSelected ? "#B6F6B5" : "white")};
-    background-image: url("${({img})=>img}");
-    background-repeat: no-repeat;
-    background-position: bottom 5px right 5px;
-    background-size: 50%;
-    >span{
-      font-size: 1.25rem;
-      font-weight: bold;
-      word-break: keep-all;
-    }
+  border: 2px solid #E5E5E5;
+  border-radius: 10px;
+  padding: 0.75rem;
+  background-color: ${({ isSelected }) => (isSelected ? "#B6F6B5" : "white")};
+  background-image: url("${({img})=>img}");
+  background-repeat: no-repeat;
+  background-position: bottom 5px right 5px;
+  background-size: 50%;
+  >span{
+    font-size: 1.25rem;
+    font-weight: bold;
+    word-break: keep-all;
   }
-
- 
 `
