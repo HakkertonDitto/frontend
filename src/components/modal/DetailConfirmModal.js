@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import { Title, Button } from "../../components";
 
-export default ({ active, onClickEdit, onClickDone }) => {
+export default ({ active, onClickEdit, onClickDone,ischanged }) => {
     return (
         <ModalBackground active={ active }>
             <Modal>
@@ -11,7 +11,7 @@ export default ({ active, onClickEdit, onClickDone }) => {
                     fontWeight: "900"}} >입력 내용 확인</Title>
                 <Catagory>노트북 및 컴퓨터</Catagory>
                 <SubTitle>상세 내용</SubTitle>
-                <Detail style={{margin: "0 auto"}}></Detail>
+                <Detail style={{margin: "0 auto"}}>{ischanged}</Detail>
                 <Button paddingHeight={1} 
                  style={{
                     margin: "1rem auto 0 auto",
