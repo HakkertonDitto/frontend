@@ -35,10 +35,14 @@
   }
 
   .text-white {
-    -webkit-text-stroke: 0.001px #BBE0BA;
+    -webkit-text-stroke: 0.01px #BBE0BA;
    
   }
   .green-text{
     color:#2CBB99;
     font-weight: bold;
+    
+    
   }
+
+ 
