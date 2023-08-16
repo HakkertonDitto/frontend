@@ -54,7 +54,7 @@ const Home = () => {
                         <div key={index} className="mr-2">
                           <input
                             id={`category-${index}`}
-                            className={`peer/${category.toLowerCase()} form-radio mr-2 mb-0.5 border-slate-300 text-sky-400 focus:ring-sky-300`}
+                            className={`peer/${category.toLowerCase()} form-radio mr-2 mb-0.5 border-slate-300 accent-green-700`}
                             type="radio"
                             name="status"
                             checked={selectedCategory === category} // 선택된 카테고리와 일치할 때만 checked로 설정
@@ -64,7 +64,7 @@ const Home = () => {
                             htmlFor={`category-${index}`}
                             className={`peer-checked/${category.toLowerCase()} ${
                               selectedCategory === category
-                                ? "text-sky-500 font-medium"
+                                ? "text-[#2CBB99] font-bold"
                                 : "text-black"
                             } `}
                           >
