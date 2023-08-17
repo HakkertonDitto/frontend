@@ -67,16 +67,16 @@ const Logo = () => {
     }
   }, [count1, count]);
 
-//홈화면
-//  useEffect(() => {
-//     const timer = setTimeout(() => {
-//       navigate("/selection");
-//     }, 5000); // 5초 후에 홈 화면으로 이동
+// 홈화면
+ useEffect(() => {
+    const timer = setTimeout(() => {
+      navigate("/selection");
+    }, 5000); // 5초 후에 홈 화면으로 이동
 
-//     return () => {
-//       clearTimeout(timer); // 컴포넌트가 언마운트되면 타이머 해제
-//     };
-//   }, [navigate]);
+    return () => {
+      clearTimeout(timer); // 컴포넌트가 언마운트되면 타이머 해제
+    };
+  }, [navigate]);
 
 
   return (
