@@ -8,8 +8,8 @@ import Selection from "./pages/Selection";
 // 도움 주는 사람
 import Home from "./pages/donor/home/Home";
 import Login from "./pages/donor/Login";
-import MyPage from "./pages/donor/MyPage";
-import Comments from "./pages/donor/Comments";
+import MyPage from "./pages/donor/mypage/MyPage";
+import Comments from "./pages/donor/mypage/Comments";
 
 // 도움 받는 사람
 import HelpB from "./pages/asker/HelpB";
@@ -43,9 +43,6 @@ function App() {
         <Route path="/asker/loading" element={<Loading />}></Route>
 
         <Route path="/test" element={<Test />}></Route>
-        
-        
-
       </Routes>
     </div>
   );
