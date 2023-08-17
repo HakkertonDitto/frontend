@@ -5,16 +5,19 @@ import Header from "../../components/Header";
 import ProgressBar from "../../components/ProgressBar";
 import DetailConfirmModal from "../../components/modal/DetailConfirmModal";
 import { Title, Button } from "../../components";
-import axios from "axios";
 
 const HelpDetail = () => {
   const [progress, setProgress] = useState(50);
   const [modalActive, setModalActive] = useState(false);
+  const [isChanged, setIsChanged] = useState("");
+  const randomCategory = getRandomCategory();
+  const textSet = (event) => {
+    setIsChanged(event.target.value);
+  };
   const openModal = (e) => {
     e.preventDefault();
     setModalActive(true);
   };
-
   const closeModal = (e) => {
     e.preventDefault();
     setModalActive(false);
@@ -32,24 +35,9 @@ const HelpDetail = () => {
     return categories[randomIndex];
   }
 
-  const randomCategory = getRandomCategory();
+  // const sendRequset = () => {
 
-  const sendRequsetToServer = () => {
-    axios
-      .post("http://localhost:8080/asker", {
-        category: randomCategory,
-        detail: "test",
-      })
-      .then(function (response) {
-        console.log(response);
-      });
-  };
-
-  const [isChanged, setIsChanged] = useState("");
-
-  const textSet = (event) => {
-    setIsChanged(event.target.value);
-  };
+  // };
 
   useEffect(() => {
     setProgress(75);
@@ -66,7 +54,6 @@ const HelpDetail = () => {
         active={modalActive}
         onClickEdit={closeModal}
         ischanged={isChanged}
-        onClickDone={sendRequsetToServer}
       />
     </Background>
   );
