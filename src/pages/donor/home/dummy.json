@@ -1,22 +1,12 @@
 [
   {
-    "category": "restaurant",
+    "category": "restaurant_cafe",
     "detail": "주문하는 방법을 잘 모르겠어요. 키오스크 메뉴판에 있는 그림으로 도와주세요.",
     "roomNumber": "3"
   },
   {
-    "category": "airport",
-    "detail": "공항에서 탑승구를 찾기 어려워요. 안내표시판을 확인하는 방법을 알려주세요.",
-    "roomNumber": "3"
-  },
-  {
-    "category": "train",
+    "category": "ticketing",
     "detail": "기차역에서 티켓을 어떻게 구매해야 할지 모르겠어요. 역무원분들의 도움을 받고 싶은데, 근처에 아무도 없어요.",
-    "roomNumber": "3"
-  },
-  {
-    "category": "bus",
-    "detail": "버스정거장에서 어디로 버스를 타러 가야하는지 모르겠어요. 키오스크에 분명히 정보가 있었던 것 같은데, 어떻게 찾아야 할지 모르겠어요.",
     "roomNumber": "3"
   },
   {
@@ -25,38 +15,23 @@
     "roomNumber": "3"
   },
   {
-    "category": "bank",
+    "category": "bank_publicoffice",
     "detail": "은행에서 업무 처리하는 게 어려워요. 구체적으로, 계좌 이체를 하고 싶은데 어떻게 하는지도 모르겠고 글씨도 흐려요.",
     "roomNumber": "3"
   },
   {
-    "category": "library",
+    "category": "bank_publicoffice",
     "detail": "도서관에서 원하는 책을 대출하고 싶어요. 키오스크에서 무슨 버튼을 눌러야 진행되는지 궁금해요.",
     "roomNumber": "3"
   },
   {
-    "category": "etc",
-    "detail": "마트에서 무인 결제를 하려고 하는데 잘 동작되지 않아요. 원래 근처에 도와주는 분들이 계시는데, 이 지점은 아무도 없네요. 도와주세요!",
-    "roomNumber": "3"
-  },
-  {
-    "category": "restaurant",
+    "category": "restaurant_cafe",
     "detail": "저는 키오스크를 사용하는 방법을 모르겠어요. 주문하고 싶은 음식이 있는데 어떻게 해야할지 잘 모르겠어요.",
     "roomNumber": "3"
   },
   {
-    "category": "airport",
-    "detail": "공항 내에서 길을 잃었어요. 탑승구로 가는 길을 알려주세요.",
-    "roomNumber": "3"
-  },
-  {
-    "category": "train",
+    "category": "ticketing",
     "detail": "열차 시간표를 보려고 키오스크 앞에 왔는데, 어떻게 사용해야 할지 잘 모르겠어요.",
-    "roomNumber": "3"
-  },
-  {
-    "category": "bus",
-    "detail": "지금 어떤 버스가 언제 도착하는지 알고 싶어요. 키오스크에서 정보를 어떻게 확인하면 될까요?",
     "roomNumber": "3"
   },
   {
@@ -65,33 +40,18 @@
     "roomNumber": "3"
   },
   {
-    "category": "bank",
+    "category": "bank_publicoffice",
     "detail": "예금 인출을 하려는데 어떻게 해야 할지 잘 모르겠어요. 키오스크를 사용하는 방법을 알려주세요.",
     "roomNumber": "3"
   },
   {
-    "category": "airport",
-    "detail": "공항 내부에서 길을 잃었어요. 도착장소로 안내해주는 키오스크가 어디에 있는지 알려주세요.",
-    "roomNumber": "3"
-  },
-  {
-    "category": "train",
+    "category": "ticketing",
     "detail": "기차역에서 승차권을 사려고 하는데 어떻게 해야 할지 모르겠어요. 키오스크 사용법을 알려주세요.",
     "roomNumber": "3"
   },
   {
-    "category": "bus",
-    "detail": "버스정류장에 키오스크가 있는데, 어떤 버스를 타야할지 모르겠어요. 버스 정보를 확인하는 방법을 알려주세요.",
-    "roomNumber": "3"
-  },
-  {
-    "category": "bank",
+    "category": "bank_publicoffice",
     "detail": "은행에서 키오스크를 사용해 입금하려고 하는데 어떻게 해야 할지 잘 모르겠어요. 도와주세요!",
-    "roomNumber": "3"
-  },
-  {
-    "category": "library",
-    "detail": "도서관에서 키오스크로 자리 예약을 하려고 하는데 어떻게 진행되는지 알려주세요.",
     "roomNumber": "3"
   },
   {
@@ -100,42 +60,27 @@
     "roomNumber": "3"
   },
   {
-    "category": "airport",
-    "detail": "공항 내부에서 출구를 찾기 어려워요. 출구로 안내하는 키오스크가 어디에 있는지 알려주세요.",
-    "roomNumber": "3"
-  },
-  {
-    "category": "train",
+    "category": "ticketing",
     "detail": "기차역에서 열차 시간을 확인하려고 하는데 키오스크를 사용해야 하나요? 어떻게 해야 할지 알려주세요.",
     "roomNumber": "3"
   },
   {
-    "category": "bank",
+    "category": "bank_publicoffice",
     "detail": "은행에서 키오스크를 사용해 예금 출금을 하려고 하는데 어떻게 해야 할지 잘 모르겠어요. 도와주세요!",
     "roomNumber": "3"
   },
   {
-    "category": "library",
-    "detail": "도서관에서 키오스크로 대출을 하려고 하는데 어떻게 해야 할지 알려주세요.",
-    "roomNumber": "3"
-  },
-  {
-    "category": "etc",
-    "detail": "마트에 있는 키오스크를 사용해서 상품을 찾으려는데 어떻게 해야 할지 잘 모르겠어요.",
-    "roomNumber": "3"
-  },
-  {
-    "category": "restaurant",
+    "category": "restaurant_cafe",
     "detail": "식당에 도착했는데 키오스크 주문이 처음이라 어떻게 해야 할지 모르겠어요. 도와주세요!",
     "roomNumber": "3"
   },
   {
-    "category": "etc",
+    "category": "bank_publicoffice",
     "detail": "박물관에서 전시회 정보를 키오스크로 확인하려고 하는데 어떻게 해야 할지 모르겠어요.",
     "roomNumber": "3"
   },
   {
-    "category": "etc",
+    "category": "bank_publicoffice",
     "detail": "관공서에서 주변 정보를 키오스크로 확인하려고 하는데 어떤 메뉴를 선택해야 할지 잘 모르겠어요.",
     "roomNumber": "3"
   }
