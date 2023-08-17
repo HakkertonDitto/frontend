@@ -13,7 +13,6 @@ import Comments from "./pages/donor/Comments";
 
 // 도움 받는 사람
 import HelpB from "./pages/asker/HelpB";
-import HelpS from "./pages/asker/HelpS";
 import HelpDetail from "./pages/asker/HelpDetail";
 import Ready from "./pages/asker/Ready";
 import Loading from "./pages/asker/Loading";
@@ -37,7 +36,6 @@ function App() {
 
         {/* 도움 받는사람 */}
         <Route path="/asker/helpB" element={<HelpB />}></Route>
-        <Route path="/asker/helpS" element={<HelpS />}></Route>
         <Route path="/asker/helpdetail" element={<HelpDetail />}></Route>
         <Route path="/asker/ready" element={<Ready />}></Route>
         <Route path="/asker/loading" element={<Loading />}></Route>

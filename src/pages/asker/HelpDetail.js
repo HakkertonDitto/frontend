@@ -8,7 +8,7 @@ import { Title, Button } from "../../components";
 import axios from "axios";
 
 const HelpDetail = () => {
-  const [progress, setProgress] = useState(50);
+  const [progress, setProgress] = useState(33);
   const [modalActive, setModalActive] = useState(false);
   const openModal = (e) => {
     e.preventDefault();
@@ -52,7 +52,7 @@ const HelpDetail = () => {
   };
 
   useEffect(() => {
-    setProgress(75);
+    setProgress(66);
   }, []);
 
   return (
