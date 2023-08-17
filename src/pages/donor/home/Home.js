@@ -9,14 +9,10 @@ import ModalHome from "./ModalHome";
 
 const Home = () => {
   const categoryMap = {
-    restaurant: "음식점",
-    airport: "공항",
-    train: "기차/지하철역",
-    bus: "버스정거장/터미널",
+    bank_publicoffice: "은행/관공서",
     hospital: "병원",
-    bank: "은행",
-    library: "도서관",
-    etc: "기타 장소",
+    ticketing: "티켓 발권",
+    restaurant_cafe: "식당/카페",
   };
   const [selectedCategory, setSelectedCategory] = useState(""); // 아무것도 선택되지 않은 상태
   const [isVolunteer, setIsVolunteer] = useState(false);
