@@ -8,7 +8,7 @@ import "../styles/Logo.css";
 const Logo = () => {
   const navigate = useNavigate();
 
-  const typingTxt = "지털   장 벽   완 화 의   ";
+  const typingTxt = "지털 장벽 완화의";
   const [landingTxt, setLandingTxt] = useState("");
   const [count, setCount] = useState(0);
 
@@ -79,10 +79,7 @@ const Logo = () => {
   }, [navigate]);
 
 
-    return () => {
-      clearTimeout(timer); // 컴포넌트가 언마운트되면 타이머 해제
-    };
-  }, [navigate]);
+ 
 
   return (
     <div className="flex justify-center">
