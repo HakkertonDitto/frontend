@@ -18,7 +18,7 @@ import HelpDetail from "./pages/asker/HelpDetail";
 import Ready from "./pages/asker/Ready";
 import Loading from "./pages/asker/Loading";
 
-import Test from "./pages/Test";
+
 
 function App() {
   return (
@@ -42,7 +42,7 @@ function App() {
         <Route path="/asker/ready" element={<Ready />}></Route>
         <Route path="/asker/loading" element={<Loading />}></Route>
 
-        <Route path="/test" element={<Test />}></Route>
+        
         
         
 
