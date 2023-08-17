@@ -1,50 +1,87 @@
 [
   {
-    "category": "computer",
-    "detail": "컴퓨터가 너무 어두워요."
+    "category": "restaurant_cafe",
+    "detail": "주문하는 방법을 잘 모르겠어요. 키오스크 메뉴판에 있는 그림으로 도와주세요.",
+    "roomNumber": "3"
   },
   {
-    "category": "computer",
-    "detail": "설정을 변경하고 싶어요."
+    "category": "ticketing",
+    "detail": "기차역에서 티켓을 어떻게 구매해야 할지 모르겠어요. 역무원분들의 도움을 받고 싶은데, 근처에 아무도 없어요.",
+    "roomNumber": "3"
   },
   {
-    "category": "kiosk",
-    "detail": "햄버거 주문이 어려워요."
+    "category": "hospital",
+    "detail": "병원에서 진료를 예약했는데, 시간을 알고 싶어요. 카운터에서 일하시는 분들이 옆에 있는 키오스크로 보면 된다고 하는데 잘 모르겠어요.",
+    "roomNumber": "3"
   },
   {
-    "category": "tablet",
-    "detail": "태블릿 사용법을 모르겠어요."
+    "category": "bank_publicoffice",
+    "detail": "은행에서 업무 처리하는 게 어려워요. 구체적으로, 계좌 이체를 하고 싶은데 어떻게 하는지도 모르겠고 글씨도 흐려요.",
+    "roomNumber": "3"
   },
   {
-    "category": "tablet",
-    "detail": "앱 다운로드 방법을 알려주세요."
+    "category": "bank_publicoffice",
+    "detail": "도서관에서 원하는 책을 대출하고 싶어요. 키오스크에서 무슨 버튼을 눌러야 진행되는지 궁금해요.",
+    "roomNumber": "3"
   },
   {
-    "category": "TV",
-    "detail": "리모컨 설정이 어려워요."
+    "category": "restaurant_cafe",
+    "detail": "저는 키오스크를 사용하는 방법을 모르겠어요. 주문하고 싶은 음식이 있는데 어떻게 해야할지 잘 모르겠어요.",
+    "roomNumber": "3"
   },
   {
-    "category": "TV",
-    "detail": "채널 변경하는 방법을 알려주세요."
+    "category": "ticketing",
+    "detail": "열차 시간표를 보려고 키오스크 앞에 왔는데, 어떻게 사용해야 할지 잘 모르겠어요.",
+    "roomNumber": "3"
   },
   {
-    "category": "kiosk",
-    "detail": "음료수 선택이 힘들어요."
+    "category": "hospital",
+    "detail": "약속 시간이 언제인지 알고 싶어요. 키오스크에서 예약 정보를 확인하는 방법을 알려주세요.",
+    "roomNumber": "3"
   },
   {
-    "category": "computer",
-    "detail": "바이러스 검사하는 방법을 알려주세요."
+    "category": "bank_publicoffice",
+    "detail": "예금 인출을 하려는데 어떻게 해야 할지 잘 모르겠어요. 키오스크를 사용하는 방법을 알려주세요.",
+    "roomNumber": "3"
   },
   {
-    "category": "tablet",
-    "detail": "화면 밝기 조절이 어려워요."
+    "category": "ticketing",
+    "detail": "기차역에서 승차권을 사려고 하는데 어떻게 해야 할지 모르겠어요. 키오스크 사용법을 알려주세요.",
+    "roomNumber": "3"
   },
   {
-    "category": "TV",
-    "detail": "사운드 설정이 이상해요."
+    "category": "bank_publicoffice",
+    "detail": "은행에서 키오스크를 사용해 입금하려고 하는데 어떻게 해야 할지 잘 모르겠어요. 도와주세요!",
+    "roomNumber": "3"
   },
   {
-    "category": "kiosk",
-    "detail": "주문 취소하는 방법을 알려주세요."
+    "category": "hospital",
+    "detail": "병원에서 진료 예약을 키오스크로 하려는데 어떤 순서로 진행되는지 알려주세요.",
+    "roomNumber": "3"
+  },
+  {
+    "category": "ticketing",
+    "detail": "기차역에서 열차 시간을 확인하려고 하는데 키오스크를 사용해야 하나요? 어떻게 해야 할지 알려주세요.",
+    "roomNumber": "3"
+  },
+  {
+    "category": "bank_publicoffice",
+    "detail": "은행에서 키오스크를 사용해 예금 출금을 하려고 하는데 어떻게 해야 할지 잘 모르겠어요. 도와주세요!",
+    "roomNumber": "3"
+  },
+  {
+    "category": "restaurant_cafe",
+    "detail": "식당에 도착했는데 키오스크 주문이 처음이라 어떻게 해야 할지 모르겠어요. 도와주세요!",
+    "roomNumber": "3"
+  },
+  {
+    "category": "bank_publicoffice",
+    "detail": "박물관에서 전시회 정보를 키오스크로 확인하려고 하는데 어떻게 해야 할지 모르겠어요.",
+    "roomNumber": "3"
+  },
+  {
+    "category": "bank_publicoffice",
+    "detail": "관공서에서 주변 정보를 키오스크로 확인하려고 하는데 어떤 메뉴를 선택해야 할지 잘 모르겠어요.",
+    "roomNumber": "3"
   }
 ]
