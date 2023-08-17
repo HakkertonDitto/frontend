@@ -7,7 +7,7 @@ import DetailConfirmModal from "../../components/modal/DetailConfirmModal";
 import { Title, Button } from "../../components";
 
 const HelpDetail = () => {
-  const [progress, setProgress] = useState(50);
+  const [progress, setProgress] = useState(33);
   const [modalActive, setModalActive] = useState(false);
   const [isChanged, setIsChanged] = useState("");
   const randomCategory = getRandomCategory();
@@ -40,7 +40,7 @@ const HelpDetail = () => {
   // };
 
   useEffect(() => {
-    setProgress(75);
+    setProgress(66);
   }, []);
 
   return (

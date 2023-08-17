@@ -5,35 +5,35 @@ import Background from "../../components/Background";
 import Header from "../../components/Header";
 import ProgressBar from "../../components/ProgressBar";
 import Card from "../../components/Card";
-import Smartphone from "../../assets/smartphone.png";
-import Laptop from "../../assets/laptop.png";
-import Kiosk from "../../assets/kiosk.png";
-import TV from "../../assets/TV.png";
 
+import Building from "../../assets/building.png";
+import Hospital from "../../assets/hospital.png";
+import Tickets from "../../assets/tickets.png";
+import Restaurant from "../../assets/restaurant.png";
 
 const HelpB = () => {
     const [progress, setProgress] = useState(0);
     const cardContents = [
         {
-            title: "컴퓨터 및 노트북",
-            imgSrc: Laptop
+            title: "은행 및 관공서",
+            imgSrc: Building
         },
         {
-            title: "키오스크",
-            imgSrc: Kiosk
+            title: "병원",
+            imgSrc: Hospital
         },
         {
-            title: "스마트폰 및 태블릿",
-            imgSrc: Smartphone
+            title: "티켓 (영화, 공원 등)",
+            imgSrc: Tickets
         },
         {
-            title: "스마트TV",
-            imgSrc: TV
+            title: "식당/카페",
+            imgSrc: Restaurant
         }
     ]
 
     useEffect(() => {
-        setProgress(25);
+        setProgress(33);
     }, []);
 
   
@@ -42,12 +42,9 @@ const HelpB = () => {
             <Header />
             <ProgressBar progress={progress} />
             <Title>어떤 것을 도와드릴까요?</Title>
-            <Card
-                contents={cardContents}
-               
-            />
+            <Card contents={cardContents} />
             <Button>
-                <Link to="/asker/HelpS" style={{ display: "block", width: "100%", height: "100%" }}>선택하기</Link>
+                <Link to="/asker/HelpDetail" style={{ display: "block", width: "100%", height: "100%" }}>선택하기</Link>
             </Button>
         </Background>
     );

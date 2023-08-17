@@ -1,4 +1,3 @@
-import Logoimage from "../assets/logoimage.png";
 import Logoicon from "../assets/logo.png";
 import Logo2 from "../assets/logo2.png";
 import { useEffect, useState } from "react";
@@ -8,7 +7,7 @@ import "../styles/Logo.css";
 const Logo = () => {
   const navigate = useNavigate();
 
-  const typingTxt = "지털   장 벽   완 화 의   ";
+  const typingTxt = "지털 장벽 완화의";
   const [landingTxt, setLandingTxt] = useState("");
   const [count, setCount] = useState(0);
 
@@ -66,8 +65,9 @@ const Logo = () => {
     }
   }, [count1, count]);
 
-  //홈화면
-  useEffect(() => {
+
+// 홈화면
+ useEffect(() => {
     const timer = setTimeout(() => {
       navigate("/selection");
     }, 5000); // 5초 후에 홈 화면으로 이동
@@ -76,6 +76,9 @@ const Logo = () => {
       clearTimeout(timer); // 컴포넌트가 언마운트되면 타이머 해제
     };
   }, [navigate]);
+
+
+ 
 
   return (
     <div className="flex justify-center">
