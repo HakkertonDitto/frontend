@@ -1,4 +1,4 @@
-import Logoimage from "../assets/logoimage.png";
+
 import Logoicon from "../assets/logo.png";
 import Logo2 from "../assets/logo2.png";
 import { useEffect, useState } from "react";
