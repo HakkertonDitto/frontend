@@ -1,10 +1,11 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import axios from "axios";
 
 // 컴포넌트 import
 import NavbarHome from "./NavbarHome";
 import VolunteerButton from "./VolunteerButton";
 
-import dummyData from "./dummy.json";
+// import dummyData from "./dummy.json";
 import ModalHome from "./ModalHome";
 
 const Home = () => {
@@ -19,6 +20,7 @@ const Home = () => {
   const [selectedModalItem, setSelectedModalItem] = useState(null); // 초기값은 null로 설정
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [open, setOpen] = useState(true);
+  const [responseData, setResponseData] = useState();
 
   const openModal = (item) => {
     setSelectedModalItem(item); // 선택한 모달의 데이터를 업데이트
@@ -29,6 +31,18 @@ const Home = () => {
     setSelectedModalItem(null); // 모달이 닫힐 때 선택한 항목의 index를 null로 초기화
     setIsModalOpen(false);
   };
+  useEffect(() => {
+    axios
+      .get(`http://localhost:8080/donor/list`)
+      .then((response) => {
+        // 성공적으로 데이터를 받아온 경우의 처리
+        setResponseData(response.data);
+      })
+      .catch((error) => {
+        // 에러 발생 시 처리
+        console.error(error);
+      });
+  }, []);
 
   return (
     <>
@@ -98,7 +112,7 @@ const Home = () => {
                     <div>
                       {selectedCategory && (
                         <ul>
-                          {dummyData
+                          {responseData
                             .filter(
                               (item) => item.category === selectedCategory
                             )
