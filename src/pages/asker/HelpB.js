@@ -11,7 +11,6 @@ import Hospital from "../../assets/hospital.png";
 import Tickets from "../../assets/tickets.png";
 import Restaurant from "../../assets/restaurant.png";
 
-
 const HelpB = () => {
     const [progress, setProgress] = useState(0);
     const cardContents = [
@@ -24,7 +23,7 @@ const HelpB = () => {
             imgSrc: Hospital
         },
         {
-            title: "티켓 (영화,공원등)",
+            title: "티켓 (영화, 공원 등)",
             imgSrc: Tickets
         },
         {
@@ -34,7 +33,7 @@ const HelpB = () => {
     ]
 
     useEffect(() => {
-        setProgress(25);
+        setProgress(33);
     }, []);
 
   
@@ -43,12 +42,9 @@ const HelpB = () => {
             <Header />
             <ProgressBar progress={progress} />
             <Title>어떤 것을 도와드릴까요?</Title>
-            <Card
-                contents={cardContents}
-               
-            />
+            <Card contents={cardContents} />
             <Button>
-                <Link to="/asker/HelpS" style={{ display: "block", width: "100%", height: "100%" }}>선택하기</Link>
+                <Link to="/asker/HelpDetail" style={{ display: "block", width: "100%", height: "100%" }}>선택하기</Link>
             </Button>
         </Background>
     );
