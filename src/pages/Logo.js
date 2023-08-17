@@ -9,7 +9,7 @@ import "../styles/Logo.css";
 const Logo = () => {
   const navigate = useNavigate();
 
-  const typingTxt = "지털   장 벽   완 화 의   ";
+  const typingTxt = "지털 장벽 완화의  ";
   const [landingTxt, setLandingTxt] = useState("");
   const [count, setCount] = useState(0);
 
