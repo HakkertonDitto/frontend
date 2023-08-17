@@ -1,7 +1,21 @@
 import styled from "styled-components";
 import { Title, Button } from "../../components";
+import axios from "axios";
 
-export default ({ active, onClickEdit, onClickDone, ischanged }) => {
+export default ({ active, onClickEdit, ischanged }) => {
+  const category = "은행/관공서";
+
+  const onClickDone = () => {
+    axios
+      .post("http://localhost:8080/asker", {
+        category: category,
+        detail: ischanged,
+      })
+      .then(function (response) {
+        console.log(response);
+      });
+  };
+
   return (
     <ModalBackground active={active}>
       <Modal>
@@ -14,7 +28,7 @@ export default ({ active, onClickEdit, onClickDone, ischanged }) => {
         >
           입력 내용 확인
         </Title>
-        <Catagory>노트북 및 컴퓨터</Catagory>
+        <Catagory>{category}</Catagory>
         <SubTitle>상세 내용</SubTitle>
         <Detail style={{ margin: "0 auto" }}>{ischanged}</Detail>
         <Button

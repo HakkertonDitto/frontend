@@ -8,16 +8,14 @@ import Selection from "./pages/Selection";
 // 도움 주는 사람
 import Home from "./pages/donor/home/Home";
 import Login from "./pages/donor/Login";
-import MyPage from "./pages/donor/MyPage";
-import Comments from "./pages/donor/Comments";
+import MyPage from "./pages/donor/mypage/MyPage";
+import Comments from "./pages/donor/mypage/Comments";
 
 // 도움 받는 사람
 import HelpB from "./pages/asker/HelpB";
 import HelpDetail from "./pages/asker/HelpDetail";
 import Ready from "./pages/asker/Ready";
 import Loading from "./pages/asker/Loading";
-
-
 
 function App() {
   return (
@@ -39,11 +37,6 @@ function App() {
         <Route path="/asker/helpdetail" element={<HelpDetail />}></Route>
         <Route path="/asker/ready" element={<Ready />}></Route>
         <Route path="/asker/loading" element={<Loading />}></Route>
-
-        
-        
-        
-
       </Routes>
     </div>
   );
