@@ -5,12 +5,14 @@ import Header from "../../components/Header";
 import ProgressBar from "../../components/ProgressBar";
 import DetailConfirmModal from "../../components/modal/DetailConfirmModal";
 import { Title, Button } from "../../components";
+import {useLocation} from "react-router-dom";
 
 const HelpDetail = () => {
   const [progress, setProgress] = useState(33);
   const [modalActive, setModalActive] = useState(false);
   const [isChanged, setIsChanged] = useState("");
   const randomCategory = getRandomCategory();
+  const location =useLocation();
   const textSet = (event) => {
     setIsChanged(event.target.value);
   };
@@ -54,11 +56,11 @@ const HelpDetail = () => {
         active={modalActive}
         onClickEdit={closeModal}
         ischanged={isChanged}
+        selectedTitle ={location.state.selectedTitle}
       />
     </Background>
   );
 };
-
 const TextArea = styled.textarea`
   width: 100%;
   height: 100%;

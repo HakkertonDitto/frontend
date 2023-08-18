@@ -1,24 +1,31 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-export default ({contents}) => {
+export default ({contents,selected,setSelected}) => {
   const [selectedCardIndex, setSelectedCardIndex] = useState(null);
+  
+
 
   const handleCardClick = (index) => {
-      setSelectedCardIndex(index);
+    if(selected === index)setSelected(-1);
+    else setSelected(index);
+      
   };
+ 
 
   return (
-      <CardWrapper>
+      <CardWrapper >
           {contents.map((item, index) => (
               <Card
                   key={index}
                   img={item.imgSrc}
-                  isSelected={selectedCardIndex === index}
+                  isSelected={selected === index}
                   onClick={() => handleCardClick(index)}
+                  
+                 
               >
                   <span>{item.title}</span>
-              </Card>
+              </Card >
           ))}
       </CardWrapper>
   );
