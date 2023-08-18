@@ -10,7 +10,6 @@ const HelpDetail = () => {
   const [progress, setProgress] = useState(33);
   const [modalActive, setModalActive] = useState(false);
   const [isChanged, setIsChanged] = useState("");
-  const randomCategory = getRandomCategory();
   const textSet = (event) => {
     setIsChanged(event.target.value);
   };
@@ -22,22 +21,6 @@ const HelpDetail = () => {
     e.preventDefault();
     setModalActive(false);
   };
-
-  // 카테고리 어느 변수에 저장되어 있는지 몰라서 임의로 생성
-  function getRandomCategory() {
-    const categories = [
-      "bank_publicoffice",
-      "hospital",
-      "ticketing",
-      "restaurant_cafe",
-    ];
-    const randomIndex = Math.floor(Math.random() * categories.length);
-    return categories[randomIndex];
-  }
-
-  // const sendRequset = () => {
-
-  // };
 
   useEffect(() => {
     setProgress(66);

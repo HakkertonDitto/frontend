@@ -7,7 +7,7 @@ const ModalHome = ({ category, data, onClose, open, setOpen }) => {
   const [isAccepting, setIsAccepting] = useState(false);
   const handleAccept = () => {
     setIsAccepting(true);
-    window.location.href = `http://localhost:8080/donor/call/${helpSeekerId}`;
+    window.location.href = `http://localhost:8080/help/call/${helpSeekerId}`;
     setTimeout(() => {
       setIsAccepting(false);
     }, 5000);
