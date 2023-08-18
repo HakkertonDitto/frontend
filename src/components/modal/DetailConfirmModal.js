@@ -3,10 +3,7 @@ import styled from "styled-components";
 import { Title, Button } from "../../components";
 import axios from "axios";
 
-export default ({ active, onClickEdit, ischanged,selectedTitle}) => {
- 
-
-  
+export default ({ active, onClickEdit, ischanged,selectedTitle}) => { 
  
   const onClickDone = () => {
     axios
