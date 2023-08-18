@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { Title, Button } from "../../components";
 import axios from "axios";
+import { useState } from "react";
 
 export default ({ active, onClickEdit, ischanged, selectedTitle }) => {
   const categoryMap = {
@@ -9,6 +10,7 @@ export default ({ active, onClickEdit, ischanged, selectedTitle }) => {
     TICKET: "티켓 (영화, 공원 등)",
     RESTAURANT_CAFE: "식당/카페",
   };
+
   const onClickDone = () => {
     axios
       .post("http://localhost:8080/asker", {
@@ -16,7 +18,8 @@ export default ({ active, onClickEdit, ischanged, selectedTitle }) => {
         detail: ischanged,
       })
       .then(function (response) {
-        console.log(response);
+        window.location.href = `http://localhost:8080/asker/${response.data.id}`;
+        // window.location.href = "http://localhost:8080/asker";
       });
   };
 
