@@ -66,8 +66,8 @@ const Login = () => {
             <div>
               <button
                 type="submit"
-                className="flex w-full justify-center rounded-full bg-[#2CBB99] p-2 text-sm font-semibold leading-6 text-white shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
-              >
+                className="flex w-full justify-center rounded-full bg-[#2CBB99] p-2 text-sm font-semibold leading-9 shadow-sm focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 "
+                style={{color: "white"}} >
                 로그인
               </button>
             </div>
