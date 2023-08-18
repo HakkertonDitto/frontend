@@ -1,21 +1,15 @@
 import { useState } from "react";
 import styled from "styled-components";
 
-export default ({contents}) => {
-  const [selectedCardIndex, setSelectedCardIndex] = useState(null);
-
-  const handleCardClick = (index) => {
-      setSelectedCardIndex(index);
-  };
-
+export default ({contents, selectedCardIndex, handleCardClick }) => {
   return (
-      <CardWrapper>
+      <CardWrapper col={Math.round(contents.length/2)}>
           {contents.map((item, index) => (
               <Card
                   key={index}
                   img={item.imgSrc}
                   isSelected={selectedCardIndex === index}
-                  onClick={() => handleCardClick(index)}
+                  onClick={ handleCardClick(index) }
               >
                   <span>{item.title}</span>
               </Card>
@@ -23,15 +17,15 @@ export default ({contents}) => {
       </CardWrapper>
   );
 }
+
 const CardWrapper = styled.div`
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: ${({col})=>(new Array(col)).fill(0).map(()=>"1fr").join(" ")};
   grid-auto-rows: 1fr;
-  
   width: 80%;
   grid-gap: 10px;
   margin-bottom: 1rem;
-  min-height: 300px;
+  min-height: 17.5rem;
 `
 
 const Card = styled.div`
