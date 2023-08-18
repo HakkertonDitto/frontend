@@ -32,6 +32,12 @@ const HelpB = () => {
         }
     ]
 
+    const [selectedCardIndex,setSelectedCardIndex] = useState(null);
+
+    const handleCardClick = (index) => () => {
+        setSelectedCardIndex(index);
+    };
+    
     useEffect(() => {
         setProgress(33);
     }, []);
@@ -42,7 +48,10 @@ const HelpB = () => {
             <Header />
             <ProgressBar progress={progress} />
             <Title>어떤 것을 도와드릴까요?</Title>
-            <Card contents={cardContents} />
+            <Card 
+                contents={cardContents} 
+                selectedCardIndex={selectedCardIndex} 
+                handleCardClick={handleCardClick} />
             <Button>
                 <Link to="/asker/HelpDetail" style={{ display: "block", width: "100%", height: "100%" }}>선택하기</Link>
             </Button>
