@@ -34,8 +34,6 @@ const HelpB = () => {
         }
     ]
 
-const category =categories.find((category)=>category.title === selectedTitle).category;
-
     useEffect(() => {
         setProgress(33);
     }, []);
@@ -48,12 +46,14 @@ const category =categories.find((category)=>category.title === selectedTitle).ca
             <Title>어떤 것을 도와드릴까요?</Title>
 
             <Card contents={cardContents} selected={selected} setSelected={setSelected} />
-            { selected!=-1&&
-
+            { selected !== -1 &&
             <Button>
-                <Link to="/asker/HelpDetail" style={{ display: "block", width: "100%", height: "100%" } }state={{selectedTitle:cardContents[selected].title}} >선택하기</Link>
+                <Link 
+                    to="/asker/HelpDetail" 
+                    style={{ display: "block", width: "100%", height: "100%" } } 
+                    state={{ selectedTitle:cardContents[selected].title }} >선택하기</Link>
             </Button>
-}
+            }
         </Background>
     );
 };

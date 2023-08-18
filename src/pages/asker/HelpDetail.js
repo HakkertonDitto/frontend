@@ -12,7 +12,6 @@ const HelpDetail = () => {
   const [modalActive, setModalActive] = useState(false);
   const [isChanged, setIsChanged] = useState("");
 
-  const randomCategory = getRandomCategory();
   const location =useLocation();
 
   const textSet = (event) => {
