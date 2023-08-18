@@ -2,14 +2,13 @@ import { Fragment, useRef, useState } from "react";
 import { Dialog, Transition } from "@headlessui/react";
 
 const ModalHome = ({ category, data, onClose, open, setOpen }) => {
+  const helpSeekerId = data.id;
   const cancelButtonRef = useRef(null);
   const [isAccepting, setIsAccepting] = useState(false);
   const handleAccept = () => {
     setIsAccepting(true);
-
-    // 모의로 수락 처리하는 로직
+    window.location.href = `http://localhost:8080/donor/call/${helpSeekerId}`;
     setTimeout(() => {
-      // 수락 처리 완료 후
       setIsAccepting(false);
     }, 5000);
   };
