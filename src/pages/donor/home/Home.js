@@ -21,6 +21,140 @@ const Home = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [open, setOpen] = useState(true);
   const [responseData, setResponseData] = useState();
+  const dummyData = [
+    {
+      category: "BANK_PUBLIC_OFFICE",
+      detail:
+        "공항 내부에서 길을 잃었어요. 도착장소로 안내해주는 키오스크가 어디에 있는지 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "TICKET",
+      detail:
+        "기차역에서 승차권을 사려고 하는데 어떻게 해야 할지 모르겠어요. 키오스크 사용법을 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "bus",
+      detail:
+        "버스정류장에 키오스크가 있는데, 어떤 버스를 타야할지 모르겠어요. 버스 정보를 확인하는 방법을 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "bank",
+      detail:
+        "은행에서 키오스크를 사용해 입금하려고 하는데 어떻게 해야 할지 잘 모르겠어요. 도와주세요!",
+      roomNumber: "3",
+    },
+    {
+      category: "library",
+      detail:
+        "도서관에서 키오스크로 자리 예약을 하려고 하는데 어떻게 진행되는지 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "etc",
+      detail:
+        "마트에 있는 키오스크를 사용해서 물건을 살려는데 어떻게 결제해야 할지 잘 모르겠어요.",
+      roomNumber: "3",
+    },
+    {
+      category: "HOSPITAL",
+      detail:
+        "병원에서 진료 예약을 키오스크로 하려는데 어떤 순서로 진행되는지 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "RESTAURANT_CAFE",
+      detail:
+        "식당에 도착했는데 키오스크 주문이 처음이라 어떻게 해야 할지 모르겠어요. 도와주세요!",
+      roomNumber: "3",
+    },
+    {
+      category: "airport",
+      detail:
+        "공항 내부에서 출구를 찾기 어려워요. 출구로 안내하는 키오스크가 어디에 있는지 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "train",
+      detail:
+        "기차역에서 열차 시간을 확인하려고 하는데 키오스크를 사용해야 하나요? 어떻게 해야 할지 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "bus",
+      detail:
+        "버스정류장에 키오스크가 있는데, 어떤 버스를 타야할지 잘 모르겠어요. 키오스크 사용법을 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "bank",
+      detail:
+        "은행에서 키오스크를 사용해 예금 출금을 하려고 하는데 어떻게 해야 할지 잘 모르겠어요. 도와주세요!",
+      roomNumber: "3",
+    },
+    {
+      category: "library",
+      detail:
+        "도서관에서 키오스크로 대출을 하려고 하는데 어떻게 해야 할지 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "etc",
+      detail:
+        "마트에 있는 키오스크를 사용해서 상품을 찾으려는데 어떻게 해야 할지 잘 모르겠어요.",
+      roomNumber: "3",
+    },
+    {
+      category: "hospital",
+      detail:
+        "병원에서 진료 예약을 키오스크로 하려고 하는데 어떤 순서로 진행되는지 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "restaurant",
+      detail:
+        "식당에 도착했는데 키오스크 주문이 처음이라 어떻게 해야 할지 모르겠어요. 도와주세요!",
+      roomNumber: "3",
+    },
+    {
+      category: "airport",
+      detail:
+        "공항 내부에서 출구를 찾기 어려워요. 출구로 안내하는 키오스크가 어디에 있는지 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "train",
+      detail:
+        "기차역에서 열차 시간을 확인하려고 하는데 키오스크를 사용해야 하나요? 어떻게 해야 할지 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "bus",
+      detail:
+        "버스정류장에 키오스크가 있는데, 어떤 버스를 타야할지 잘 모르겠어요. 키오스크 사용법을 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "bank",
+      detail:
+        "은행에서 키오스크를 사용해 예금 출금을 하려고 하는데 어떻게 해야 할지 잘 모르겠어요. 도와주세요!",
+      roomNumber: "3",
+    },
+    {
+      category: "library",
+      detail:
+        "도서관에서 키오스크로 대출을 하려고 하는데 어떻게 해야 할지 알려주세요.",
+      roomNumber: "3",
+    },
+    {
+      category: "etc",
+      detail:
+        "마트에 있는 키오스크를 사용해서 상품을 찾으려는데 어떻게 해야 할지 잘 모르겠어요.",
+      roomNumber: "3",
+    },
+  ];
 
   const openModal = (item) => {
     setSelectedModalItem(item); // 선택한 모달의 데이터를 업데이트
@@ -112,7 +246,7 @@ const Home = () => {
                     <div>
                       {selectedCategory && (
                         <ul>
-                          {responseData
+                          {dummyData
                             .filter(
                               (item) => item.category === selectedCategory
                             )
