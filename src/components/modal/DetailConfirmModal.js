@@ -1,12 +1,14 @@
-
 import styled from "styled-components";
 import { Title, Button } from "../../components";
 import axios from "axios";
 
-
-export default ({ active, onClickEdit, ischanged,selectedTitle}) => { 
-
- 
+export default ({ active, onClickEdit, ischanged, selectedTitle }) => {
+  const categoryMap = {
+    BANK_PUBLIC_OFFICE: "은행 및 관공서",
+    HOSPITAL: "병원",
+    TICKET: "티켓 (영화, 공원 등)",
+    RESTAURANT_CAFE: "식당/카페",
+  };
   const onClickDone = () => {
     axios
       .post("http://localhost:8080/asker", {
@@ -19,7 +21,7 @@ export default ({ active, onClickEdit, ischanged,selectedTitle}) => {
   };
 
   return (
-    <ModalBackground active={active} >
+    <ModalBackground active={active}>
       <Modal>
         <Title
           style={{
@@ -30,7 +32,7 @@ export default ({ active, onClickEdit, ischanged,selectedTitle}) => {
         >
           입력 내용 확인
         </Title>
-        <Catagory>{selectedTitle}</Catagory>
+        <Catagory>{categoryMap[selectedTitle]} </Catagory>
         <SubTitle>상세 내용</SubTitle>
         <Detail style={{ margin: "0 auto" }}>{ischanged}</Detail>
         <Button
