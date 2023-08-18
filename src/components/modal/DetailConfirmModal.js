@@ -1,14 +1,19 @@
+
 import styled from "styled-components";
 import { Title, Button } from "../../components";
 import axios from "axios";
 
-export default ({ active, onClickEdit, ischanged }) => {
+
+export default ({ active, onClickEdit, ischanged,selectedTitle}) => {
   const category = "BANK_PUBLIC_OFFICE";
 
+
+  
+ 
   const onClickDone = () => {
     axios
       .post("http://localhost:8080/asker", {
-        category: category,
+        category: selectedTitle,
         detail: ischanged,
       })
       .then(function (response) {
@@ -17,7 +22,7 @@ export default ({ active, onClickEdit, ischanged }) => {
   };
 
   return (
-    <ModalBackground active={active}>
+    <ModalBackground active={active} >
       <Modal>
         <Title
           style={{
@@ -28,7 +33,7 @@ export default ({ active, onClickEdit, ischanged }) => {
         >
           입력 내용 확인
         </Title>
-        <Catagory>{category}</Catagory>
+        <Catagory>{selectedTitle}</Catagory>
         <SubTitle>상세 내용</SubTitle>
         <Detail style={{ margin: "0 auto" }}>{ischanged}</Detail>
         <Button

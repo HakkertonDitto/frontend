@@ -6,12 +6,14 @@ import Header from "../../components/Header";
 import ProgressBar from "../../components/ProgressBar";
 import Card from "../../components/Card";
 
+
 import Building from "../../assets/building.png";
 import Hospital from "../../assets/hospital.png";
 import Tickets from "../../assets/tickets.png";
 import Restaurant from "../../assets/restaurant.png";
 
 const HelpB = () => {
+    const [selected,setSelected]=useState(-1);
     const [progress, setProgress] = useState(0);
     const cardContents = [
         {
@@ -32,12 +34,8 @@ const HelpB = () => {
         }
     ]
 
-    const [selectedCardIndex,setSelectedCardIndex] = useState(null);
+const category =categories.find((category)=>category.title === selectedTitle).category;
 
-    const handleCardClick = (index) => () => {
-        setSelectedCardIndex(index);
-    };
-    
     useEffect(() => {
         setProgress(33);
     }, []);
@@ -48,13 +46,14 @@ const HelpB = () => {
             <Header />
             <ProgressBar progress={progress} />
             <Title>어떤 것을 도와드릴까요?</Title>
-            <Card 
-                contents={cardContents} 
-                selectedCardIndex={selectedCardIndex} 
-                handleCardClick={handleCardClick} />
+
+            <Card contents={cardContents} selected={selected} setSelected={setSelected} />
+            { selected!=-1&&
+
             <Button>
-                <Link to="/asker/HelpDetail" style={{ display: "block", width: "100%", height: "100%" }}>선택하기</Link>
+                <Link to="/asker/HelpDetail" style={{ display: "block", width: "100%", height: "100%" } }state={{selectedTitle:cardContents[selected].title}} >선택하기</Link>
             </Button>
+}
         </Background>
     );
 };
