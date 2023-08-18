@@ -9,7 +9,7 @@ const Comments = () => {
 
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/donor/mypage/comment/${helperId}`)
+      .get(`http://localhost:8080/help/helper/${helperId}/donor`)
       .then((response) => {
         setDonorData(response.data);
       })
