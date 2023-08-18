@@ -3,7 +3,7 @@ import { Title, Button } from "../../components";
 import axios from "axios";
 
 export default ({ active, onClickEdit, ischanged }) => {
-  const category = "은행/관공서";
+  const category = "bank_publicoffice";
 
   const onClickDone = () => {
     axios
