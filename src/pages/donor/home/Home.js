@@ -10,10 +10,10 @@ import ModalHome from "./ModalHome";
 
 const Home = () => {
   const categoryMap = {
-    bank_publicoffice: "은행/관공서",
-    hospital: "병원",
-    ticketing: "티켓 발권",
-    restaurant_cafe: "식당/카페",
+    BANK_PUBLIC_OFFICE: "은행/관공서",
+    HOSPITAL: "병원",
+    TICKET: "티켓 발권",
+    RESTAURANT_CAFE: "식당/카페",
   };
   const [selectedCategory, setSelectedCategory] = useState(""); // 아무것도 선택되지 않은 상태
   const [isVolunteer, setIsVolunteer] = useState(false);
@@ -33,7 +33,7 @@ const Home = () => {
   };
   useEffect(() => {
     axios
-      .get(`http://localhost:8080/donor/list`)
+      .get(`http://localhost:8080/help/list`)
       .then((response) => {
         // 성공적으로 데이터를 받아온 경우의 처리
         setResponseData(response.data);
